@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./Css/ToDo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="TodoContainer">
+        <h1 class="Heading">To-Do List</h1>
+        <div class="inputSection">
+          <input type="text" id="todoInput" placeholder="Add a new task..." />
+          <button id="addBtn">Add</button>
+        </div>
+        <ol id="todoList"></ol>
+
+        <div class="CheckedItems" style="display: none">
+          <div>
+            <p><i class="fa-solid fa-angle-down"></i> 0 Checked Items</p>
+          </div>
+          <div>
+            <button id="DelAllBtn">
+              <i class="fa-regular fa-trash-can"></i> Delete All
+            </button>
+          </div>
+        </div>
+        <ol id="todoCheckedList"></ol>
+      </div>
+    </div>
+    <div id="DeletePopUpContainer">
+      <div id="DelPopUp">
+        <p>Are You Sure Want to Delete the Task ?</p>
+        <div class="Btn-div">
+          <button class="Del-Btn">
+            <i class="fa-regular DelBtn-icon fa-trash-can"></i>Delete
+          </button>
+          <button class="Cancel-Btn">
+            <i class="fa-solid fa-xmark"></i>Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./Js/ToDo.js"></script>
+  </body>
+</html>

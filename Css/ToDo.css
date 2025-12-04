@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.TodoContainer {
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 400px;
+  height: 600px;
+  padding: 0px 10px 10px 10px;
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Heading {
+  position: sticky;
+  top: 0;
+  background-color: rgb(182, 218, 249);
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  border-bottom: 1px solid lightgray;
+}
+
+.inputSection {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todoInput {
+  width: 75%;
+  height: 35px;
+  padding: 5px 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#addBtn {
+  width: 20%;
+  height: 35px;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#addBtn:hover {
+  background-color: deepskyblue;
+}
+
+#todoList,
+#todoCheckedList {
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+#CheckedItem {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+#todoList li,
+#todoCheckedList li {
+  position: relative;
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid lightgray;
+}
+
+.EditIcons {
+  position: absolute;
+  color: blue;
+  right: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.EditIcons:hover {
+  color: darkblue;
+}
+
+.DelIcons {
+  color: red;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.DelIcons:hover {
+  color: darkred;
+}
+
+#DeletePopUpContainer {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.516);
+}
+#DelPopUp {
+  display: none;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.Btn-div {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.Del-Btn,
+.Cancel-Btn {
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: dodgerblue;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: all 0.2s ease-in-out;
+}
+
+.Cancel-Btn {
+  background-color: gray;
+}
+
+.Cancel-Btn:hover {
+  background-color: darkgray;
+}
+
+.Del-Btn {
+  background-color: red;
+}
+
+.Del-Btn:hover {
+  background-color: darkred;
+}
+
+.CheckedItems {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+#DelAllBtn {
+  right: 0;
+  position: absolute;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  top: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+#DelAllBtn:hover {
+  color: red;
+}
+
+#todoCheckedList li {
+  text-decoration: line-through;
+  color: gray;
+}
