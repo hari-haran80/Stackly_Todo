@@ -8,6 +8,9 @@
   width: 100%;
   height: 100vh;
   background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .TodoContainer {
@@ -18,10 +21,6 @@
   padding: 0px 10px 10px 10px;
   border-radius: 20px;
   background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -84,6 +83,7 @@
 
 #todoList li,
 #todoCheckedList li {
+  animation: fadeIn 0.5s ease-in-out;
   position: relative;
   padding: 10px;
   font-size: 18px;
@@ -120,12 +120,13 @@
   height: 100vh;
   position: absolute;
   top: 0;
+  z-index: 999;
   left: 0;
   background-color: rgba(0, 0, 0, 0.516);
 }
 #DelPopUp {
   display: none;
-  z-index: 999;
+  z-index: 99;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -214,4 +215,25 @@
 #todoCheckedList li {
   text-decoration: line-through;
   color: gray;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-left: 50px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .TodoContainer {
+    width: 90%;
+    height: 80vh;
+  }
+  #DelPopUp {
+    width: 85%;
+  }
 }

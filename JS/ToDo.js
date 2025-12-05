@@ -49,7 +49,7 @@ function createTaskElement(taskText, isChecked = false) {
     li.querySelector(".task-text").style.color = "gray";
     todoCheckedList.appendChild(li);
   } else {
-    todoList.appendChild(li);
+    todoList.prepend(li);
   }
 
   const checkbox = li.querySelector(".task-checkbox");
@@ -67,6 +67,7 @@ function createTaskElement(taskText, isChecked = false) {
 
 function editTask(e) {
   const li = e.target.closest("li");
+  console.log(li);
   const taskText = li.querySelector(".task-text");
   const currentText = taskText.textContent;
   const newText = prompt("Edit your task:", currentText);
